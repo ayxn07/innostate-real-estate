@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | InnoState Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Admin Dashboard ===== -->
+  <section>
+    <div class="container">
+      <div class="dash-head">
+        <div>
+          <p class="section-label">Admin Dashboard</p>
+          <h1 class="section-title" id="dash-welcome">Welcome Back</h1>
+        </div>
+        <button class="btn btn-outline" id="logout-btn">Log Out</button>
+      </div>
+
+      <div class="dash-layout">
+        <nav class="dash-nav">
+          <button class="active" data-panel="panel-properties">View All Properties</button>
+          <button data-panel="panel-add">Add New Property</button>
+          <button data-panel="panel-inbox">Client Enquiries</button>
+        </nav>
+
+        <div class="dash-content">
+          <div class="dash-panel active" id="panel-properties">
+            <h2>Property Management</h2>
+            <p class="panel-hint">Every listing currently on the site, including ones added from this dashboard.</p>
+            <table class="dash-table" id="admin-prop-table">
+              <thead>
+                <tr><th>Title</th><th>Location</th><th>Type</th><th>Purpose</th><th>Price</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="dash-panel" id="panel-add">
+            <h2>Add New Property</h2>
+            <p class="panel-hint">New listings appear in the table and on the public properties page.</p>
+            <div class="form-msg" id="add-msg"></div>
+            <form id="add-form" novalidate>
+              <div class="form-group">
+                <label for="add-title">Title</label>
+                <input type="text" id="add-title" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-location">Location</label>
+                  <select id="add-location">
+                    <option value="Downtown">Downtown</option>
+                    <option value="City Center">City Center</option>
+                    <option value="Suburbs">Suburbs</option>
+                    <option value="Waterfront">Waterfront</option>
+                    <option value="Arts District">Arts District</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-type">Type</label>
+                  <select id="add-type">
+                    <option value="Apartment">Apartment</option>
+                    <option value="Villa">Villa</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-purpose">Purpose</label>
+                  <select id="add-purpose">
+                    <option value="Buy">Buy</option>
+                    <option value="Rent">Rent</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-price">Price (USD)</label>
+                  <input type="number" id="add-price" min="1" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-beds">Bedrooms</label>
+                  <input type="number" id="add-beds" min="0" value="2">
+                </div>
+                <div class="form-group">
+                  <label for="add-baths">Bathrooms</label>
+                  <input type="number" id="add-baths" min="0" value="1">
+                </div>
+                <div class="form-group">
+                  <label for="add-sqft">Area (sq ft)</label>
+                  <input type="number" id="add-sqft" min="1" value="1000">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="add-image">Image URL (optional)</label>
+                <input type="url" id="add-image" placeholder="https://... or images/property-1.jpg">
+              </div>
+              <div class="form-group">
+                <label for="add-desc">Description</label>
+                <textarea id="add-desc" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold">Add Property</button>
+            </form>
+          </div>
+
+          <div class="dash-panel" id="panel-inbox">
+            <h2>Client Enquiries</h2>
+            <p class="panel-hint">Enquiries sent from property pages across the site.</p>
+            <div id="inbox-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

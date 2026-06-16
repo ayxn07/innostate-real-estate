@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoState Real Estate | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" style="background-image: url('images/hero-home.jpg');">
+    <div class="container">
+      <div class="hero-content">
+        <p class="section-label">InnoState Real Estate</p>
+        <h1>Where Vision Meets <span>Address</span></h1>
+        <p>From skyline penthouses to quiet family villas, we match serious buyers and renters with properties worth coming home to.</p>
+
+        <form class="search-bar" action="properties.html" method="get">
+          <select name="type">
+            <option value="">Property Type</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+          </select>
+          <select name="location">
+            <option value="">Location</option>
+            <option value="Downtown">Downtown</option>
+            <option value="City Center">City Center</option>
+            <option value="Suburbs">Suburbs</option>
+            <option value="Waterfront">Waterfront</option>
+            <option value="Arts District">Arts District</option>
+          </select>
+          <select name="price">
+            <option value="">Price Range</option>
+            <option value="low">Under $750k</option>
+            <option value="mid">$750k - $1.5M</option>
+            <option value="high">Above $1.5M</option>
+          </select>
+          <button type="submit" class="btn btn-gold">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quick About ===== -->
+  <section>
+    <div class="container grid-2">
+      <div class="reveal">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">A Boutique Agency With a Builder's Eye</h2>
+        <p class="section-intro">InnoState was founded on a simple belief: a property deal should feel considered, not rushed. Our agents know every street in their patch and treat your budget like their own.</p>
+
+        <div class="counters">
+          <div class="counter">
+            <h3 data-count="350">0</h3>
+            <p>Homes Sold</p>
+          </div>
+          <div class="counter">
+            <h3 data-count="12">0</h3>
+            <p>Years Active</p>
+          </div>
+          <div class="counter">
+            <h3 data-count="98">0</h3>
+            <p>% Client Rating</p>
+          </div>
+        </div>
+
+        <a href="about.html" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="reveal">
+        <img src="images/logo-square.png" alt="InnoState emblem">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Featured Listings ===== -->
+  <section style="background: var(--surface);">
+    <div class="container">
+      <p class="section-label reveal">Featured Listings</p>
+      <h2 class="section-title reveal">Hand-Picked This Month</h2>
+      <p class="section-intro reveal">A short selection from our current portfolio. Visit the properties page for the full list and filters.</p>
+      <div class="grid-3" id="featured-grid">
+        <!-- cards rendered by properties.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Client Testimonials ===== -->
+  <section>
+    <div class="container">
+      <p class="section-label reveal">Client Testimonials</p>
+      <h2 class="section-title reveal">What Our Clients Say</h2>
+      <div class="grid-3 reveal" id="testimonial-grid"></div>
+      <div style="text-align:center; margin-top: 36px;">
+        <a href="testimonials.html" class="btn btn-outline">Read All Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/properties.js"></script>
+</body>
+</html>

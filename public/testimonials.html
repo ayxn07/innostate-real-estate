@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | InnoState Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Success Stories Hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Success Stories</p>
+      <h1>Real Clients, Real Moves</h1>
+      <p>Every review below comes from a verified buyer or renter who closed with us.</p>
+    </div>
+  </section>
+
+  <!-- ===== Reviews Grid ===== -->
+  <section>
+    <div class="container">
+      <div class="grid-3" id="reviews-grid">
+        <!-- review cards rendered by reviews.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Leave a Review ===== -->
+  <section style="background: var(--surface);">
+    <div class="container">
+      <p class="section-label reveal" style="text-align:center;">Leave a Review</p>
+      <h2 class="section-title reveal" style="text-align:center;">Worked With Us? Tell Others.</h2>
+      <div class="form-panel reveal" style="max-width: 640px; margin: 0 auto;">
+        <div class="form-msg" id="review-msg"></div>
+        <form id="review-form" novalidate>
+          <div class="form-group">
+            <label for="rev-name">Your Name</label>
+            <input type="text" id="rev-name" required>
+          </div>
+          <div class="form-group">
+            <label for="rev-rating">Rating</label>
+            <select id="rev-rating" required>
+              <option value="">Select a rating</option>
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Very Good</option>
+              <option value="3">3 - Good</option>
+              <option value="2">2 - Fair</option>
+              <option value="1">1 - Poor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="rev-type">Property Type</label>
+            <select id="rev-type" required>
+              <option value="">What did you buy or rent?</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Villa">Villa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="rev-text">Your Review</label>
+            <textarea id="rev-text" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/reviews.js"></script>
+</body>
+</html>

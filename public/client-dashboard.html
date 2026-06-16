@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard | InnoState Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Client Dashboard ===== -->
+  <section>
+    <div class="container">
+      <div class="dash-head">
+        <div>
+          <p class="section-label">Client Dashboard</p>
+          <h1 class="section-title" id="dash-welcome">Welcome Back</h1>
+        </div>
+        <button class="btn btn-outline" id="logout-btn">Log Out</button>
+      </div>
+
+      <div class="dash-layout">
+        <nav class="dash-nav">
+          <button class="active" data-panel="panel-saved">Saved Properties</button>
+          <button data-panel="panel-enquiries">Sent Enquiries</button>
+        </nav>
+
+        <div class="dash-content">
+          <div class="dash-panel active" id="panel-saved">
+            <h2>Saved Properties</h2>
+            <p class="panel-hint">Properties you've hearted while browsing. Click the heart again on any listing to remove it.</p>
+            <div class="grid-3" id="saved-grid"></div>
+          </div>
+
+          <div class="dash-panel" id="panel-enquiries">
+            <h2>Sent Enquiries</h2>
+            <p class="panel-hint">Messages you've sent to our agents about specific properties.</p>
+            <div id="enquiry-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

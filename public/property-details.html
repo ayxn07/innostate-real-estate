@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | InnoState Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html" class="active">Properties</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Property Details (filled in by details.js) ===== -->
+  <section>
+    <div class="container details-layout" id="details-wrap">
+
+      <!-- left column: image first, then name and the rest -->
+      <div class="details-main">
+        <div class="gallery" id="gallery">
+          <div class="gallery-nav">
+            <button id="gallery-prev">&#8249;</button>
+            <button id="gallery-next">&#8250;</button>
+          </div>
+        </div>
+
+        <p class="section-label" id="detail-location" style="margin-top: 32px;">Loading...</p>
+        <h1 class="section-title" id="detail-title" style="font-size: 2.6rem; margin-bottom: 6px;"></h1>
+        <p style="color: var(--gold); font-size: 1.5rem; margin-bottom: 24px;" id="detail-price"></p>
+
+        <div class="specs" id="detail-specs"></div>
+
+        <h2 class="section-title" style="font-size: 1.8rem;">Amenities</h2>
+        <ul class="amenities-list" id="detail-amenities"></ul>
+
+        <h2 class="section-title" style="font-size: 1.8rem;">About This Property</h2>
+        <p class="section-intro" id="detail-description"></p>
+      </div>
+
+      <!-- right column: enquiry form, sticks while the left side scrolls -->
+      <aside class="enquiry-aside">
+        <div class="form-panel">
+          <h2 class="section-title" style="font-size: 1.6rem;">Enquire About This Property</h2>
+          <div class="form-msg" id="enquiry-msg"></div>
+          <form id="enquiry-form" novalidate>
+            <div class="form-group">
+              <label for="enq-name">Full Name</label>
+              <input type="text" id="enq-name" required>
+            </div>
+            <div class="form-group">
+              <label for="enq-email">Email Address</label>
+              <input type="email" id="enq-email" required>
+            </div>
+            <div class="form-group">
+              <label for="enq-message">Message</label>
+              <textarea id="enq-message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Send Enquiry</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- shown instead if the id in the URL doesn't match anything -->
+    <div class="container" id="not-found" style="display:none; text-align:center; padding: 60px 0;">
+      <h1 class="section-title">Property Not Found</h1>
+      <p class="section-intro" style="margin: 0 auto 30px;">The listing you're looking for may have been sold or removed.</p>
+      <a href="properties.html" class="btn btn-outline">Back to Listings</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>

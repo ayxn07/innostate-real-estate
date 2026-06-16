@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | InnoState Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Contact Us</p>
+      <h1>Let's Talk Property</h1>
+      <p>Call, email, or drop by - whichever suits. We reply to every enquiry within one working day.</p>
+    </div>
+  </section>
+
+  <!-- ===== Contact Split Layout ===== -->
+  <section>
+    <div class="container grid-2" style="align-items: start;">
+      <div class="contact-info reveal">
+        <h2 class="section-title">Our Office</h2>
+        <p><strong>Address</strong> 14 Goldcrest Avenue, Suite 300, City Center</p>
+        <p><strong>Support Email</strong> hello@innostate.example</p>
+        <p><strong>Phone</strong> +1 (555) 014-7782</p>
+        <p><strong>Office Hours</strong> Mon - Fri: 9:00 - 18:00<br>Sat: 10:00 - 14:00 &middot; Sun: Closed</p>
+      </div>
+
+      <div class="form-panel reveal">
+        <h2 class="section-title" style="font-size: 1.8rem;">Send an Inquiry</h2>
+        <div class="form-msg" id="contact-msg"></div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="ct-name">Full Name</label>
+            <input type="text" id="ct-name" required>
+          </div>
+          <div class="form-group">
+            <label for="ct-email">Email Address</label>
+            <input type="email" id="ct-email" required>
+          </div>
+          <div class="form-group">
+            <label for="ct-phone">Phone</label>
+            <input type="tel" id="ct-phone">
+          </div>
+          <div class="form-group">
+            <label for="ct-message">Message</label>
+            <textarea id="ct-message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

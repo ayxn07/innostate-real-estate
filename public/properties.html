@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties | InnoState Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="InnoState Real Estate"></a>
+      <button class="nav-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html" class="active">Properties</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Our Portfolio</p>
+      <h1>Current Listings</h1>
+      <p>Every property below has been viewed and vetted by our own team. Use the filters to narrow things down.</p>
+    </div>
+  </section>
+
+  <!-- ===== Filters + Property Grid ===== -->
+  <section>
+    <div class="container">
+      <div class="filter-bar">
+        <select id="filter-location">
+          <option value="">All Locations</option>
+          <option value="Downtown">Downtown</option>
+          <option value="City Center">City Center</option>
+          <option value="Suburbs">Suburbs</option>
+          <option value="Waterfront">Waterfront</option>
+          <option value="Arts District">Arts District</option>
+        </select>
+        <select id="filter-type">
+          <option value="">All Types</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Villa">Villa</option>
+        </select>
+        <select id="filter-price">
+          <option value="">Any Price</option>
+          <option value="low">Under $750k</option>
+          <option value="mid">$750k - $1.5M</option>
+          <option value="high">Above $1.5M</option>
+        </select>
+        <select id="filter-purpose">
+          <option value="">Buy or Rent</option>
+          <option value="Buy">Buy</option>
+          <option value="Rent">Rent</option>
+        </select>
+        <button class="btn btn-gold" id="filter-reset">Reset</button>
+      </div>
+
+      <div class="grid-3" id="property-grid">
+        <!-- cards rendered by properties.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="InnoState Real Estate">
+        <p>Boutique real estate for buyers, renters and owners who expect more than a listing portal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@innostate.example">hello@innostate.example</a></li>
+          <li><a href="tel:+15550147782">+1 (555) 014-7782</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> InnoState Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/properties.js"></script>
+</body>
+</html>
